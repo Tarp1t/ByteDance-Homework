@@ -12,3 +12,11 @@ func TestSplit(t *testing.T) {
 		t.Errorf("Excepted:%v,got:%v", want, got)
 	}
 }
+
+func TestMoreSplit(t *testing.T) {
+	got := Split("abcd", "bc")
+	want := []string{"a", "d"}
+	if !reflect.DeepEqual(want, got) {
+		t.Errorf("Excepted:%v,got:%v", want, got)
+	}
+}
